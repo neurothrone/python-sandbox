@@ -10,11 +10,11 @@ def sleep(seconds: int, results: dict = None):
 
 
 if __name__ == "__main__":
-    results = {}
+    thread_results = {}
 
-    threads = [threading.Thread(target=sleep, args=(n, results)) for n in range(5)]
+    threads = [threading.Thread(target=sleep, args=(n, thread_results)) for n in range(5)]
     [t.start() for t in threads]
     [t.join() for t in threads]
 
     print("All threads finished.")
-    print(results)
+    print(thread_results)
