@@ -2,7 +2,7 @@ import threading
 import time
 
 
-def sleep(seconds: int, results: dict = None):
+def sleep(seconds: int, results: dict | None = None):
     time.sleep(seconds)
     print(f"Finished sleeping for {seconds} seconds.")
     if results is not None:
